@@ -1,0 +1,5 @@
+.DS_Store
+libs/*
+!libs/Gruntfile.coffee
+!libs/package.json
+bower_components/*
