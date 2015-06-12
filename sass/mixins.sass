@@ -1,0 +1,55 @@
+=render-to($type...)
+  @for $i from 1 through length($type)
+    @if nth($type, $i) == xxs
+      @media #{$xxs}
+        @content
+    @if nth($type, $i) == xs
+      @media #{$xs}
+        @content
+    @if nth($type, $i) == sm
+      @media #{$sm}
+        @content
+    @if nth($type, $i) == ms
+      @media #{$ms}
+        @content
+    @if nth($type, $i) == md
+      @media #{$md}
+        @content
+    @if nth($type, $i) == lg
+      @media #{$lg}
+        @content
+
+@function number($string)
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'
+  $numbers:  0   1   2   3   4   5   6   7   8   9
+  $result: 0
+
+  @for $i from 1 through str-length($string)
+    $character: str-slice($string, $i, $i)
+    $index: index($strings, $character)
+    $number: nth($numbers, $index)
+    $result: $result * 10 + $number
+  @return $result
+
+=make-columns($args...)
+  @for $i from 1 through length($args)
+    $args: inspect($args)
+    $type: str-slice(nth($args, $i), 1,2)
+    $size: number(str-slice(nth($args, $i), 3, str-length(nth($args, $i))))
+    @if $type == 'xs'
+      +make-xs-column($size)
+    @if $type == 'ms'
+      +make-ms-column($size)
+    @if $type == 'sm'
+      +make-sm-column($size)
+    @if $type == 'md'
+      +make-md-column($size)
+    @if $type == 'lg'
+      +make-lg-column($size)
+
+=vertical-align
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
