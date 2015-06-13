@@ -1,0 +1,27 @@
+.subpage--wrapper
+  +make-row()
+  .subpage--left
+    +make-md-column(4, 100px)
+    h2
+      border-bottom: 1px solid $gray-exlight
+      padding-bottom: 20px
+      margin-bottom: 20px
+
+    p
+      font-family: $font-family-sans-serif
+
+  .subpage--box
+    +make-columns(md4)
+    @extend %hover-box-with-bg
+  .subpage--box__multi
+    +make-md-column(4,0)
+    .subpage--box
+      +make-columns(md12)
+      height: 325px
+
+  .subpage--bg__krize
+    background-image: url('/assets/images/subpage-krize.jpg')
+  .subpage--bg__objekty
+    background-image: url('/assets/images/subpage-objekty.jpg')
+  .subpage--bg__pamatky
+    background-image: url('/assets/images/subpage-pamatky.jpg')
