@@ -5,9 +5,6 @@ html
     meta name="keywords" content="template language"
     meta name="author" content="author"
     link href="/assets/css/style.css" rel="stylesheet"
-    script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-    script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBrd0ILJVBh5WY6aU-zoe2AuxuYM8g6jsc&amp;sensor=false"
-    script src="/assets/js/scripts.js"
   body
     header.navbar.navbar-default.navbar-fixed-top role="banner"
       .container
@@ -39,30 +36,22 @@ html
             li: a href="#" Naše činnost
             li: a href="#" Naše reference
     main
-      .contact--wrapper
-        .contact--left
-          h2 Kontakt
-          .contact--information
-            strong Jiří Rejda
-            ul
-              li +420 605 178 258
-              li: a href="mailto:jiri.rejda@centrum.cz" jiri.rejda@centrum.cz
-
-          form.form action="#" method="post"
-            .form-group
-              input#Email.form-control required="" type="text"
-              label Váš email
-            .form-group
-              textarea.form-control required="" rows="3"
-              label Váš dotaz
-            a.btn.btn-secondary href="http://www.jquery2dotnet.com" role="button" Odeslat zprávu
-
-        .contact--right
-          #map-container.map-wrapper
-          address
-            strong Brumov - Bylnice, Zlínsko
-            span Areál FARMY Bylnice
-            span Ulice Hliníky
+      .homepage--wrapper
+        .homepage--box
+          .homepage--bg__socharstvi
+          h2
+            | Sochařství
+            small Restaurujeme sakrální a památkové stavby - kaple, kostely, historické domy ...
+        .homepage--box
+          .homepage--bg__kamenictvi
+          h2
+            | Kamenictví
+            small Restaurujeme sakrální a památkové stavby - kaple, kostely, historické domy ...
+        .homepage--box
+          .homepage--bg__restaurovani
+          h2
+            | Restaurování
+            small Restaurujeme sakrální a památkové stavby - kaple, kostely, historické domy ...
 
     footer
       .footer--wrapper
