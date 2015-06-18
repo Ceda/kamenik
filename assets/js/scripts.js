@@ -18,11 +18,18 @@
       map = new google.maps.Map(wrapper, mapOptions);
       img = '/assets/images/map-pin.png';
       image = new google.maps.MarkerImage(img, new google.maps.Size(55, 82));
-      return marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         position: markerpoint,
         icon: image,
         map: map
       });
     }
+    return $('[data-toggle="show-request-form"]').on('click', function() {
+      var box;
+      $('.forsale--box').addClass('blind-form').removeClass('visible-form');
+      box = $(this).closest('.forsale--box');
+      return box.addClass('visible-form').removeClass('blind-form');
+    });
   });
+
 }).call(this);

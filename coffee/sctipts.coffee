@@ -18,3 +18,8 @@ $ ->
       position: markerpoint
       icon: image
       map: map)
+
+  $('[data-toggle="show-request-form"]').on 'click', ->
+    $('.forsale--box').addClass('blind-form').removeClass('visible-form')
+    box = $(this).closest('.forsale--box')
+    box.addClass('visible-form').removeClass('blind-form')

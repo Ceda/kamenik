@@ -4,14 +4,33 @@
     +make-md-column(2, 0)
     border-right: 1px solid $gray-exlight
     font-family: $font-family-sans-serif
+    min-height: 595px
     &:hover
       box-shadow: 0 0 8px rgba(black, 0.8)
+      z-index: 50
+    &.visible-form
+      +make-md-column(4, 0)
+      box-shadow: 0 0 15px rgba(black, 0.8)
       z-index: 100
-
+      .main
+        a.btn
+          display: none
+      .request-form,
+      .main
+        +make-md-column(6, 0)
+        display: block
+    &.blind-form
+      opacity: 0.5
+    .request-form
+      display: none
     img
       max-width: 100%
     .forsale--box-content
-      padding: 20px
+      padding: 15px 20px
+      strong
+        font-weight: 400
+        margin-top: 10px
+        display: block
     dl
       dt
         color: $gray-lighter

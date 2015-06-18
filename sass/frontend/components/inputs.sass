@@ -1,0 +1,27 @@
+.form-group
+  position: relative
+  label
+    color: $gray-lighter
+    position: absolute
+    top: 8px
+    left: 10px
+    font-weight: 400
+    transform: translateY(0)
+    transition: all .2s ease-in-out
+    font-size: 22px
+    cursor: text
+
+  input,
+  textarea
+    border: 0
+    border-bottom: 1px solid $gray-exlight
+    min-height: 50px
+    box-shadow: none !important
+    margin-top: 25px
+    &:focus,
+    &.active,
+    &:valid
+      border-bottom: 1px solid $gray-light
+      & + label
+        font-size: 14px
+        transform: translateY(-25px)

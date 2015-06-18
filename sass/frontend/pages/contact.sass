@@ -16,31 +16,6 @@
         display: block
     form
       margin-top: 60px
-      .form-group
-        position: relative
-        label
-          color: $gray-lighter
-          position: absolute
-          top: 8px
-          left: 10px
-          font-weight: 400
-          transform: translateY(0)
-          transition: all .2s ease-in-out
-          font-size: 22px
-
-        input,
-        textarea
-          border: 0
-          border-bottom: 1px solid $gray-exlight
-          min-height: 50px
-          box-shadow: none
-          margin-top: 30px
-          &:focus,
-          &.active,
-          &:valid
-            & + label
-              font-size: 14px
-              transform: translateY(-25px)
   .contact--right
     +make-columns(md7)
     address
